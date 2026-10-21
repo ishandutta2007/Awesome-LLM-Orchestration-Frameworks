@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360">
+  <defs>
+    <!-- Background linear gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0d17" />
+      <stop offset="50%" stop-color="#101935" />
+      <stop offset="100%" stop-color="#070a12" />
+    </linearGradient>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="nodeGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+
+    <linearGradient id="nodeGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9333ea" />
+      <stop offset="100%" stop-color="#4f46e5" />
+    </linearGradient>
+
+    <linearGradient id="nodeGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .grid-line { stroke: #1e293b; stroke-opacity: 0.4; stroke-width: 1; }
+    .pulse-glow { animation: pulse 4s ease-in-out infinite alternate; }
+    .flow-line { stroke-dasharray: 8 14; animation: dash 20s linear infinite; }
+    .flow-line-reverse { stroke-dasharray: 6 10; animation: dashRev 15s linear infinite; }
+    .float-slow { animation: floatSlow 6s ease-in-out infinite alternate; }
+    .float-delayed { animation: floatSlow 7s ease-in-out 2s infinite alternate; }
+    
+    @keyframes dash {
+      to { stroke-dashoffset: -1000; }
+    }
+    @keyframes dashRev {
+      to { stroke-dashoffset: 1000; }
+    }
+    @keyframes pulse {
+      0% { opacity: 0.3; }
+      100% { opacity: 0.8; }
+    }
+    @keyframes floatSlow {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-8px); }
+    }
+  </style>
+
+  <!-- Deep Background Layer -->
+  <rect width="1200" height="360" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Subtle Circuit / Matrix Grid -->
+  <g class="grid-line">
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="180" x2="1200" y2="180" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="150" y1="0" x2="150" y2="360" />
+    <line x1="300" y1="0" x2="300" y2="360" />
+    <line x1="450" y1="0" x2="450" y2="360" />
+    <line x1="600" y1="0" x2="600" y2="360" />
+    <line x1="750" y1="0" x2="750" y2="360" />
+    <line x1="900" y1="0" x2="900" y2="360" />
+    <line x1="1050" y1="0" x2="1050" y2="360" />
+  </g>
+
+  <!-- Ambient Dynamic Glowing Orbs (Behind content) -->
+  <circle cx="200" cy="100" r="130" fill="#38bdf8" opacity="0.12" filter="url(#softGlow)" class="pulse-glow" />
+  <circle cx="1000" cy="240" r="160" fill="#a855f7" opacity="0.13" filter="url(#softGlow)" class="pulse-glow" />
+  <circle cx="600" cy="180" r="120" fill="#3b82f6" opacity="0.08" filter="url(#softGlow)" />
+
+  <!-- Animated Orchestration Neural Data Paths (Dynamic Aspects) -->
+  <!-- Left Side System Flow -->
+  <path d="M 50 180 Q 150 70 260 140 T 360 210" fill="none" stroke="#38bdf8" stroke-width="2.5" opacity="0.5" class="flow-line" />
+  <path d="M 60 280 Q 180 320 280 230 T 400 130" fill="none" stroke="#818cf8" stroke-width="1.8" opacity="0.4" class="flow-line-reverse" />
+  
+  <!-- Right Side Multi-Agent Flow -->
+  <path d="M 820 140 Q 940 50 1050 120 T 1150 200" fill="none" stroke="#c084fc" stroke-width="2.5" opacity="0.5" class="flow-line" />
+  <path d="M 800 230 Q 920 310 1020 250 T 1140 100" fill="none" stroke="#38bdf8" stroke-width="1.8" opacity="0.4" class="flow-line-reverse" />
+
+  <!-- Floating Dynamic Agent Node Badges (Flanking the center) -->
+  <g class="float-slow">
+    <!-- Left Dynamic Node -->
+    <rect x="70" y="75" width="130" height="34" rx="17" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2" opacity="0.85" filter="url(#glow)"/>
+    <circle cx="90" cy="92" r="5" fill="#38bdf8">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="105" y="97" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">Multi-Agent</text>
+  </g>
+
+  <g class="float-delayed">
+    <!-- Left Dynamic Sub-Node -->
+    <rect x="110" y="240" width="135" height="34" rx="17" fill="#1e293b" stroke="#818cf8" stroke-width="1.2" opacity="0.85" filter="url(#glow)"/>
+    <circle cx="130" cy="257" r="5" fill="#818cf8">
+      <animate attributeName="opacity" values="1;0.4;1" dur="2.5s" repeatCount="indefinite" />
+    </circle>
+    <text x="145" y="262" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">Graph State</text>
+  </g>
+
+  <g class="float-slow">
+    <!-- Right Dynamic Node -->
+    <rect x="990" y="85" width="140" height="34" rx="17" fill="#1e293b" stroke="#c084fc" stroke-width="1.2" opacity="0.85" filter="url(#glow)"/>
+    <circle cx="1010" cy="102" r="5" fill="#c084fc">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2.2s" repeatCount="indefinite" />
+    </circle>
+    <text x="1025" y="107" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">Agentic RAG</text>
+  </g>
+
+  <g class="float-delayed">
+    <!-- Right Dynamic Sub-Node -->
+    <rect x="950" y="245" width="145" height="34" rx="17" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2" opacity="0.85" filter="url(#glow)"/>
+    <circle cx="970" cy="262" r="5" fill="#38bdf8">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite" />
+    </circle>
+    <text x="985" y="267" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">Production Ops</text>
+  </g>
+
+  <!-- FOREGROUND CONTENT: Guaranteed clarity, prominent typography -->
+  <!-- Top Category Tag -->
+  <g transform="translate(600, 70)">
+    <rect x="-140" y="-14" width="280" height="28" rx="14" fill="#0f172a" stroke="#475569" stroke-width="1.2" />
+    <text text-anchor="middle" y="5" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" letter-spacing="2">CURATED ECOSYSTEM 2026</text>
+  </g>
+
+  <!-- Main Headline -->
+  <text x="600" y="145" text-anchor="middle" fill="url(#primaryGrad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="900" letter-spacing="-0.5" filter="url(#glow)">Awesome LLM Orchestration</text>
+
+  <!-- Subtitle -->
+  <text x="600" y="195" text-anchor="middle" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="600" letter-spacing="0.2">Frameworks, Autonomous Agents &amp; Multi-Agent Systems</text>
+
+  <!-- Supporting Description Pill Row -->
+  <text x="600" y="235" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="500">
+    LangGraph • CrewAI • Dify • AutoGen • LlamaIndex • Semantic Kernel • Haystack • MetaGPT • n8n
+  </text>
+
+  <!-- Interactive Decorative Bottom Bar -->
+  <g transform="translate(430, 275)">
+    <rect x="0" y="0" width="340" height="28" rx="14" fill="#1e1b4b" stroke="#6366f1" stroke-width="1" opacity="0.9" />
+    <circle cx="18" cy="14" r="5" fill="#22c55e">
+      <animate attributeName="r" values="4;6;4" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="34" y="18" fill="#e0e7ff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">Enterprise Verified &amp; Open Source Benchmarks</text>
+  </g>
+</svg>
