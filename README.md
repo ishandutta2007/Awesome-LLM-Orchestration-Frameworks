@@ -60,9 +60,9 @@ The table below catalogs premier commercial and hosted SaaS platforms for buildi
 
 ## 💻 Open-Source GitHub Frameworks
 
-Curated open-source repositories powering local, enterprise-hosted, and transparent agentic architectures. Repositories are ranked strictly by **GitHub Star Count** (descending) with direct links to their stargazers page.
+Curated open-source repositories powering local, enterprise-hosted, and transparent agentic architectures. Repositories are ranked strictly by **GitHub Stars_Count** (descending) with direct links to their stargazers page.
 
-| Repository | Stars | License | Architecture & Description |
+| Repository | GitHub_Stars | License | Architecture & Description |
 | :--- | :--- | :--- | :--- |
 | **[n8n](https://github.com/n8n-io/n8n)** | [![Stars](https://img.shields.io/github/stars/n8n-io/n8n?style=social&color=white)](https://github.com/n8n-io/n8n/stargazers) | Sustainable Use (Fair-code) | **Fair-code workflow automation** with 400+ built-in service connectors, visual flowchart UX, and dedicated native AI Agent nodes for autonomous multi-step pipelines. |
 | **[AutoGPT](https://github.com/Significant-Gravitas/AutoGPT)** | [![Stars](https://img.shields.io/github/stars/Significant-Gravitas/AutoGPT?style=social&color=white)](https://github.com/Significant-Gravitas/AutoGPT/stargazers) | MIT | **Pioneering autonomous agent vision** — modular agent builder platform, benchmark arena, and execution graph engine for long-horizon task completion. |
